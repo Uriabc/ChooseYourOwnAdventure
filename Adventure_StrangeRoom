@@ -1,0 +1,298 @@
+/*
+ * Uri Do
+ * Choose Your Own Adventure Program
+ * June 15,2022
+ */
+
+package chooseyourownadventure;
+
+/**
+ *
+ * @author urdo5941
+ */
+import java.util.Scanner;
+
+public class ChooseYourOwnAdventure {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        Scanner key = new Scanner(System.in);
+        String first,second,third, fourth;
+        System.out.println("Welcome to \"Escape the strange house\"");
+        System.out.println("STARTING....(Y/N)?");
+        String start = key.next();
+        //Start the story
+        if (start.equals("Y")) {
+            System.out.println("-------------------------------------");
+            System.out.println("You are in a strange room, everything is really creepy. You decide to look around and figure it out.");
+            System.out.println("There are two doors(bright and dark) and a bed.");
+            System.out.println("Where will you go to?? (GoToBrightDoor/GoToDarkDoor/Bed)");
+            //3 decisions here
+            first = key.next();
+            System.out.println("~~~~~~~");
+            if (first.equals("Bed")) {
+                
+                System.out.println("You want to lay on that bed");
+                System.out.println("You fall asleep!");
+                System.out.println("Soon, you hear a strange sound that is coming to your room");
+                System.out.println("What will you do?? (Lay/GoToBrigthDoor/GoToDarkDoor)");
+                //3 decisions
+                second = key.next();
+                System.out.println("~~~~~~~");
+                
+                //Bad Ending
+                if (second.equals("Lay")){
+                    System.out.println("Somebody comes in with a big knife");
+                    System.out.println("YOU ARE KILLED");
+                    System.out.println("-----THE END-----");
+                }
+                else if (second.equals("GoToBrightDoor")) {
+                    System.out.println("You run to the bright door and open it");
+                    System.out.println("An upstairs is in front of you");
+                    System.out.println("But it is really dark");
+                    System.out.println("Would you go up? (Y/N)");
+                    //2 decisions
+                    third = key.next();
+                    System.out.println("~~~~~~~");
+                    
+                    //Bad Ending
+                    if (third.equals("N")) {
+                        System.out.println("You decided to going back to the room");
+                        System.out.println("Somebody comes in with a big knife");
+                        System.out.println("YOU ARE KILLED");
+                        System.out.println("-----THE END-----");
+                    }
+                    else if (third.equals("Y")) {
+                        System.out.println("You run to the end of the stair quickly and everything in front of your eyes is a covered window");
+                        System.out.println("You open it...");
+                        System.out.println("A wood appears...");
+                        System.out.println("You can hear the sound closer and louder");
+                        System.out.println("What should you do?? (JumpOut/Return)");
+                        //2 decisions
+                        fourth = key.next();
+                        System.out.println("~~~~~~~");
+                        
+                        //bad Ending
+                        if (fourth.equals("Return")) {
+                            System.out.println("You returned");
+                            System.out.println("You see a huge man with a creepy face and on his hand there is a bloody knife");
+                            System.out.println("YOU ARE KILLED");
+                            System.out.println("-----THE END-----");
+                        }
+                        
+                        //Saved Ending
+                        else if (fourth.equals("JumpOut")){
+                            System.out.println("You jumped out and fell on a grass path!");
+                            System.out.println("There is a small way that leads into the wood");
+                            System.out.println("You look back to the window there is a horror shadow up there with a big knife and you hear that shadow is laughing");
+                            System.out.println("You try running out of the house");
+                            System.out.println("YOU ESCAPED!!!");
+                            System.out.println("CONGRATS!!!!!");
+                        }
+                        else {
+                            System.out.println("WRONG DECISION!");
+                        }
+                    }
+                    else {
+                        System.out.println("WRONG DECISION!");
+                    }
+                }
+                else if (second.equals("GoToDarkDoor")) {
+                    System.out.println("You opened the dark door");
+                    System.out.println("You found a big knife");
+                    System.out.println("The strange sound is closer");
+                    System.out.println("What should you do?? (TakeTheKnife/RunOut)");
+                    //2 decisions
+                    third = key.next();
+                    System.out.println("~~~~~~~");
+                    
+                    //Bad Ending
+                    if (third.equals("RunOut")) {
+                        System.out.println("You turn back and suprised");
+                        System.out.println("A black man is standing in front of you");
+                        System.out.println("On his hand there is a bloody knife");
+                        System.out.println("...");
+                        System.out.println("YOU DIED!!!");
+                        System.out.println("-----THE END-----");
+                    }
+                    else if (third.equals("TakeTheKnife")) {
+                        System.out.println("You decided to take the knife");
+                        System.out.println("You hear the sound stopped behind you");
+                        System.out.println("You turn back");
+                        System.out.println("A black man is standing in front of you");
+                        System.out.println("On his hand there is a knife \nIt looks similar to the one on your hand but very bloody");
+                        System.out.println("He starts going towards you");
+                        System.out.println("What should you do?? (Talk/Defend)");
+                        //2 decisions
+                        fourth = key.next();
+                        System.out.println("~~~~~~~");
+                        
+                        //Bad Ending
+                        if (fourth.equals("Talk")) {
+                            System.out.println("You asked him");
+                            System.out.println("He does not answer");
+                            System.out.println("He jumps towards you");
+                            System.out.println("PAM PAM PAM");
+                            System.out.println("...");
+                            System.out.println("YOU HAS BEEN KILLED");
+                            System.out.println("-----THE END-----");
+                        }
+                        
+                        //Good Ending
+                        else if (fourth.equals("Defend")){
+                            System.out.println("You hold the knife tightly");
+                            System.out.println("The man jumps towards you");
+                            System.out.println("You are too scared and you try to defend");
+                            System.out.println("When his knife is in front of your head 2 inches, you close your eyes and swing your arms towards him");
+                            System.out.println("PAM");
+                            System.out.println("...");
+                            System.out.println("You hear a scream");
+                            System.out.println("Open eyes, you see the man lays on the ground, your knife is stabbed in his forehead");
+                            System.out.println("\"LUCKY\" - You thought");
+                            System.out.println("A voice appears in your head \n\"CONGRATS.YOU.ARE.ALIVE.NOW.YOU.MUST.KILL.A.PERSON.TO.SAVE.YOUR.LIFE\"");
+                            System.out.println("\"TAKE.YOUR.KNIFE.AND.DO.IT.OR.YOU.WILL.DIE\"");
+                            System.out.println("You retake your knife");
+                            System.out.println("You go back to your room");
+                            System.out.println("The bright door is know become to red door");
+                            System.out.println("You hold your knife and get out of that room to find the voice");
+                            System.out.println("------------------");
+                            System.out.println("Everything in that house has become infinite loop");
+                            System.out.println("-----THE END-----");
+                        }
+                        else {
+                            System.out.println("WRONG DECISION!");
+                        }
+                        
+                    }
+                    else {
+                        System.out.println("WRONG DECISION!");
+                    }
+                }
+                else {
+                    System.out.println("WRONG DECISION!");
+                }
+            }
+            
+            //Repeat ...
+            else if (first.equals("GoToBrightDoor")) {
+                System.out.println("You run to the bright door and open it");
+                System.out.println("An upstairs is in front of you");
+                System.out.println("But it is really dark");
+                System.out.println("Would you go up? (Y/N)");
+                third = key.next();
+                System.out.println("~~~~~~~");
+                if (third.equals("N")) {
+                    System.out.println("You decided to going back to the room");
+                    System.out.println("Somebody comes in with a big knife");
+                    System.out.println("YOU ARE KILLED");
+                    System.out.println("-----THE END-----");
+                }
+                else if (third.equals("Y")) {
+                    System.out.println("You run to the end of the stair quickly and everything in front of your eyes is a covered window");
+                    System.out.println("You open it...");
+                    System.out.println("A wood appears...");
+                    System.out.println("You can hear the sound closer and louder");
+                    System.out.println("What should you do?? (JumpOut/Return)");
+                    fourth = key.next();
+                    System.out.println("~~~~~~~");
+                    if (fourth.equals("Return")) {
+                        System.out.println("You returned");
+                        System.out.println("You see a huge man with a creepy face and on his hand there is a bloody knife");
+                        System.out.println("YOU ARE KILLED");
+                        System.out.println("-----THE END-----");
+                    }
+                    else if (fourth.equals("JumpOut")){
+                        System.out.println("You jumped out and fell on a grass path!");
+                        System.out.println("There is a small way that leads into the wood");
+                        System.out.println("You look back to the window there is a horror shadow up there with a big knife and you hear that shadow is laughing");
+                        System.out.println("You try running out of the house");
+                        System.out.println("YOU ESCAPED!!!");
+                        System.out.println("CONGRATS!!!!!");
+                    }
+                    else {
+                        System.out.println("WRONG DECISION!");
+                    }
+                }
+                else {
+                    System.out.println("WRONG DECISION!");
+                    }
+                }
+            else if (first.equals("GoToDarkDoor")) {
+                System.out.println("You opened the dark door");
+                System.out.println("You found a big knife");
+                System.out.println("The strange sound is closer");
+                System.out.println("What should you do?? (TakeTheKnife/RunOut)");
+                third = key.next();
+                System.out.println("~~~~~~~");
+                if (third.equals("RunOut")) {
+                    System.out.println("You turn back and suprised");
+                    System.out.println("A black man is standing in front of you");
+                    System.out.println("On his hand there is a bloody knife");
+                    System.out.println("...");
+                    System.out.println("YOU DIED!!!");
+                    System.out.println("-----THE END-----");
+                }
+                else if (third.equals("TakeTheKnife")) {
+                    System.out.println("You decided to take the knife");
+                    System.out.println("You hear the sound stopped behind you");
+                    System.out.println("You turn back");
+                    System.out.println("A black man is standing in front of you");
+                    System.out.println("On his hand there is a knife \nIt looks similar to the one on your hand but very bloody");
+                    System.out.println("He starts going towards you");
+                    System.out.println("What should you do?? (Talk/Defend)");
+                    fourth = key.next();
+                    System.out.println("~~~~~~~");
+                    if (fourth.equals("Talk")) {
+                        System.out.println("You asked him");
+                        System.out.println("He does not answer");
+                        System.out.println("He jumps towards you");
+                        System.out.println("PAM PAM PAM");
+                        System.out.println("...");
+                        System.out.println("YOU HAS BEEN KILLED");
+                        System.out.println("-----THE END-----");
+                    }
+                    else if (fourth.equals("Defend")){
+                        System.out.println("You hold the knife tightly");
+                        System.out.println("The man jumps towards you");
+                        System.out.println("You are too scared and you try to defend");
+                        System.out.println("When his knife is in front of your head 2 inches, you close your eyes and swing your arms towards him");
+                        System.out.println("PAM");
+                        System.out.println("...");
+                        System.out.println("You hear a scream");
+                        System.out.println("Open eyes, you see the man lays on the ground, your knife is stabbed in his forehead");
+                        System.out.println("\"LUCKY\" - You thought");
+                        System.out.println("A voice appears in your head \n\"CONGRATS.YOU.ARE.ALIVE.NOW.YOU.MUST.KILL.A.PERSON.TO.SAVE.YOUR.LIFE\"");
+                        System.out.println("\"TAKE.YOUR.KNIFE.AND.DO.IT.OR.YOU.WILL.DIE\"");
+                        System.out.println("You retake your knife");
+                        System.out.println("You go back to your room");
+                        System.out.println("The bright door is know become to red door");
+                        System.out.println("You hold your knife and get out of that room to find the voice");
+                        System.out.println("------------------");
+                        System.out.println("Everything in that house has become infinite loop");
+                        System.out.println("-----THE END-----");
+                    }
+                    else {
+                        System.out.println("WRONG DECISION!");
+                    }
+                        
+                }
+                else {
+                    System.out.println("WRONG DECISION!");
+                }
+            } 
+            
+        }
+        //Stop the program
+        else if (start.equals("N")) {
+            System.out.println("-------------------------------------");
+            System.out.println("GOODBYE!");
+        }
+        else {
+            System.out.println("WRONG DECISION!");
+        }
+        
+    }
+    
+}
